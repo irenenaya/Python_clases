@@ -59,22 +59,26 @@ class CuentaBancaria():
     def resetear_extraido(self):
         self.__extraido_hoy = 0
 
-miCuenta = CuentaBancaria()
-print(miCuenta)
-miCuenta.depositar_dinero(1000)
-print(miCuenta)
-miCuenta.extraer_dinero(200)
-print(miCuenta)
-miCuenta.extraer_dinero(1000)
-otraCuenta= CuentaBancaria(10000)
-print(otraCuenta)
-otraCuenta.transferir(2000, miCuenta)
-print(otraCuenta)
-print(miCuenta)
-miCuenta.transferir(3000, otraCuenta)
+def main():
+    miCuenta = CuentaBancaria()
+    print(miCuenta)
+    miCuenta.depositar_dinero(1000)
+    print(miCuenta)
+    miCuenta.extraer_dinero(200)
+    print(miCuenta)
+    miCuenta.extraer_dinero(1000)
+    otraCuenta= CuentaBancaria(10000)
+    print(otraCuenta)
+    otraCuenta.transferir(2000, miCuenta)
+    print(otraCuenta)
+    print(miCuenta)
+    miCuenta.transferir(3000, otraCuenta)
 
-print(otraCuenta)
-print(miCuenta)
+    print(otraCuenta)
+    print(miCuenta)
+
+if __name__ == "__main__":
+    main()
 
 # 0
 # 1000
