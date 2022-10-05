@@ -13,8 +13,8 @@ Tener en cuenta los conceptos antes vistos.
 
 class CuentaBancaria():
     def __init__(self, saldo = 0) -> None:
-        self.__saldo = saldo
-        self.__LIMITE_DIARIO = 2000
+        self.saldo = saldo
+        self.LIMITE_DIARIO = 2000
         self.__extraido_hoy = 0
         
     # obtener saldo actual
@@ -22,14 +22,14 @@ class CuentaBancaria():
         """
         Retorna el saldo actual de la cuenta
         """
-        return self.__saldo
+        return self.saldo
 
     # depositar dinero
     def depositar_dinero(self, dinero):
         """
         toma un monto de dinero como argumento y lo suma al saldo
         """
-        self.__saldo += dinero
+        self.saldo += dinero
 
     # extraer dinero
     def extraer_dinero(self, dinero):
@@ -37,8 +37,8 @@ class CuentaBancaria():
         toma un monto de dinero, y si el saldo es suficiente, lo resta y retorna True
         Si el saldo es insuficiente, retorna false
         """
-        if self.__saldo - dinero >= 0:
-            self.__saldo -= dinero
+        if self.saldo - dinero >= 0:
+            self.saldo -= dinero
             return True
         else:
             print("Saldo insuficiente")
@@ -54,7 +54,7 @@ class CuentaBancaria():
             destino.depositar_dinero(dinero)
 
     def __str__(self) -> str:
-        return "El saldo de la cuenta es: "+ str(self.__saldo)
+        return "El saldo de la cuenta es: "+ str(self.saldo)
 
     def resetear_extraido(self):
         self.__extraido_hoy = 0
