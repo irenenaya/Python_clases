@@ -4,10 +4,10 @@ from ejemplos import TomaInput
 
 class Juego:
     def __init__(self, nombre, tablero) -> None:
-        self.__nombre = nombre
-        self.__nombre_tablero = tablero
-        self.__jugador = Jugador(self.nombre)
-        self.__tablero = Tablero(self.nombre_tablero)
+        self.__nombre = nombre # podria no ser atributo
+        self.__nombre_tablero = tablero # podria no ser atributo
+        self.__jugador = Jugador(nombre)
+        self.__tablero = Tablero(tablero)
 
         
     def jugar(self):
@@ -69,3 +69,4 @@ def main():
     nombre, tablero = datos.tomar_datos_usuario()
     juego = Juego(nombre, tablero)
     juego.jugar()
+    mi_booleano_horrible = juego.getTablero().getMatriz()[0][0].isalpha()

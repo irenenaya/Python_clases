@@ -52,6 +52,7 @@ class Tablero:
         self.diccionario = {}
         self.palabra_actual = ''
         
+        
 
     def generar_tablero(self):
         pass
