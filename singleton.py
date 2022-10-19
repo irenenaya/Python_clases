@@ -12,7 +12,7 @@ class Singleton:
          raise Exception("This class is a singleton!")
       else:
          Singleton.__instance = self
-s = Singleton()
+s = Singleton.getInstance()
 print (s)
 
 s = Singleton.getInstance()

@@ -14,12 +14,14 @@ class Juego:
         # ciclo continua hasta que esten todas las palabras o se ingrese 'fin'
             # imprimir Tablero
             # tomar palabra del usuario. (tomar directamente o agregar funcion a TomaInput())
+                #  si la palabra es 'fin':
+                    # termina el ciclo
                 # si la palabra está en el tablero:
                     # imprimir mensaje -> esta clase
                     # aumentar puntaje a Jugador -> Jugador
                     # pasar la palabra a mayúscula -> Tablero
                     # agregar la palabra a lista de palabras encontradas -> Tablero
-                # si la palabra no está en el tablero:
+                # else si la palabra no está en el tablero:
                     # imprimimos mensaje
 
         # Imprimir nombre y puntaje del Jugador. (print(self.jugador))
@@ -69,4 +71,4 @@ def main():
     nombre, tablero = datos.tomar_datos_usuario()
     juego = Juego(nombre, tablero)
     juego.jugar()
-    mi_booleano_horrible = juego.getTablero().getMatriz()[0][0].isalpha()
+    #mi_booleano_horrible = juego.getTablero().getMatriz()[0][0].isalpha()
